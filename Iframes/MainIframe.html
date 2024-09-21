@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+            var PasswordChecked = false
+            function configurePasswordCheck() {
+                PasswordChecked = true
+            }
+            function checkPassword() {
+            var password = document.getElementById("passwordBox");
+            var passwordText = password.value;
+            if(passwordText == "$IdMoUTH%10") {
+                return true;
+                configurePasswordCheck();
+            }
+            alert("Access denied! Incorrect password or no user input!");
+            return false;
+            }
+        </script>
+        <link rel="stylesheet" href="../Styles/styles.css">
+    </head>
+    <body class="body">
+        <div class="header">
+            <p style="font-size: 30pt; color: rgb(0, 255, 0);">Sidmouth Primary School</p>
+            <p style="font-size: 15pt; color: rgb(0, 255, 0);">Help From Function Community</p>
+            <p style="color: rgb(0, 255, 0);">Please enter the password to view this website.</p>
+            <p>Password:<br><input id="passwordBox" type="password"/></p>
+            <a href="SIIframe.html" onclick="return checkPassword();">                                                                                                                                                                           
+                <button>
+                    Submit Password
+                </button>
+                
+            </a>
+        </div>
+        <div class="content">
+    
+        </div>
+    </body>
+</html>
